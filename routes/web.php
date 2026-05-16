@@ -18,4 +18,6 @@ Route::middleware([
     Route::get('/dosen', function () {
         return view('dosen');
     })->name('dosen');
+
+    Route::get('/kjm', \App\Livewire\KjmManagement::class)->name('kjm');
 });

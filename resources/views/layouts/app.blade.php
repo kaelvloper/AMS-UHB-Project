@@ -41,5 +41,51 @@
         @stack('modals')
 
         @livewireScripts
+
+        <!-- Toast Notifications -->
+        <div 
+            x-data="{ 
+                show: false, 
+                message: '', 
+                type: 'success',
+                showToast(event) {
+                    this.message = event.detail[0].message;
+                    this.type = event.detail[0].type || 'success';
+                    this.show = true;
+                    setTimeout(() => { this.show = false }, 3000);
+                }
+            }"
+            @toast.window="showToast($event)"
+            x-show="show"
+            x-transition:enter="transform ease-out duration-300 transition"
+            x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+            x-transition:enter-end="translate-y-0 opacity-100 sm:translate-x-0"
+            x-transition:leave="transition ease-in duration-100"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            class="fixed bottom-5 right-5 z-[100] max-w-sm w-full bg-white shadow-2xl rounded-2xl pointer-events-auto overflow-hidden border border-gray-100"
+            style="display: none;"
+        >
+            <div class="p-4 flex items-center">
+                <div class="flex-shrink-0">
+                    <template x-if="type === 'success'">
+                        <svg class="h-6 w-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </template>
+                    <template x-if="type === 'error'">
+                        <svg class="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </template>
+                </div>
+                <div class="ml-3 flex-1">
+                    <p x-text="message" class="text-sm font-black text-blue-900 uppercase tracking-widest"></p>
+                </div>
+            </div>
+            <div class="h-1 bg-gray-100 w-full">
+                <div 
+                    class="h-full transition-all duration-[3000ms] ease-linear" 
+                    :class="type === 'success' ? 'bg-green-500' : 'bg-red-500'"
+                    :style="show ? 'width: 100%' : 'width: 0%'"
+                ></div>
+            </div>
+        </div>
     </body>
 </html>
