@@ -18,4 +18,8 @@ Route::middleware([
     Route::get('/dosen', function () {
         return view('dosen');
     })->name('dosen');
+
+    Route::get('/rekap-honor', function () {
+        return view('rekap-honor');
+    })->name('rekap-honor');
 });
