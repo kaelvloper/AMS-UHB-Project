@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DistribusiPerkuliahanController;
+use App\Http\Controllers\RekapDosenLbController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,4 +22,5 @@ Route::middleware([
     })->name('dosen');
 
     Route::resource('distribusiku', DistribusiPerkuliahanController::class);
+    Route::resource('rekap-lb', RekapDosenLbController::class);
 });
