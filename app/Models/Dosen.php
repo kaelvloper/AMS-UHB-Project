@@ -13,12 +13,10 @@ class Dosen extends Model
         'nidn',
         'nama',
         'gelar',
-        'jabatan',
+        'program_studi',
+        'jabatan_akademik',
         'status',
+        'status_aktif',
+        'foto',
     ];
-
-    public function kjms()
-    {
-        return $this->hasMany(Kjm::class);
-    }
 }
