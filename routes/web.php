@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DistribusiPerkuliahanController;
 use App\Http\Controllers\RekapDosenLbController;
+use App\Http\Controllers\ManajemenKjmController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,4 +24,5 @@ Route::middleware([
 
     Route::resource('distribusiku', DistribusiPerkuliahanController::class);
     Route::resource('rekap-lb', RekapDosenLbController::class);
+    Route::resource('manajemen-kjm', ManajemenKjmController::class);
 });
