@@ -19,4 +19,9 @@ class Dosen extends Model
         'status_aktif',
         'foto',
     ];
+
+    public function getNamaLengkapAttribute()
+    {
+        return $this->nama . ($this->gelar ? ', ' . $this->gelar : '');
+    }
 }

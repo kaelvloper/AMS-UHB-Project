@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DistribusiPerkuliahanController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,4 +19,6 @@ Route::middleware([
     Route::get('/dosen', function () {
         return view('dosen');
     })->name('dosen');
+
+    Route::resource('distribusiku', DistribusiPerkuliahanController::class);
 });

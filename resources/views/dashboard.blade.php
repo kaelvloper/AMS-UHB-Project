@@ -37,7 +37,7 @@
                         <p class="text-blue-200 text-base mb-8 max-w-lg">Kelola jadwal distribusi mata kuliah dan beban perkuliahan secara terstruktur.</p>
                     </div>
                     <div class="relative z-10">
-                        <a href="#" class="inline-flex items-center text-sm font-bold text-blue-900 hover:text-gray-900 bg-yellow-400 hover:bg-yellow-300 px-5 py-2.5 rounded-lg transition-colors shadow-md">
+                        <a href="{{ route('distribusiku.index') }}" class="inline-flex items-center text-sm font-bold text-blue-900 hover:text-gray-900 bg-yellow-400 hover:bg-yellow-300 px-5 py-2.5 rounded-lg transition-colors shadow-md">
                             Buka Modul 
                             <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
