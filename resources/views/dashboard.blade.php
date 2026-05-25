@@ -142,7 +142,7 @@
                         <p class="text-blue-200 text-base mb-8 max-w-lg">Rekapitulasi nilai akademik mahasiswa secara komprehensif untuk periode panjang.</p>
                     </div>
                     <div class="relative z-10">
-                        <a href="#" class="inline-flex items-center text-sm font-bold text-blue-900 hover:text-gray-900 bg-yellow-400 hover:bg-yellow-300 px-5 py-2.5 rounded-lg transition-colors shadow-md">
+                        <a href="{{ route('rekap-nilai.index') }}" class="inline-flex items-center text-sm font-bold text-blue-900 hover:text-gray-900 bg-yellow-400 hover:bg-yellow-300 px-5 py-2.5 rounded-lg transition-colors shadow-md">
                             Buka Modul 
                             <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
@@ -163,7 +163,7 @@
                         <p class="text-blue-200 text-sm mb-8">Dokumentasi dan pelaporan seluruh kegiatan akademik universitas.</p>
                     </div>
                     <div class="relative z-10">
-                        <a href="#" class="inline-flex items-center text-sm font-bold text-blue-900 hover:text-gray-900 bg-yellow-400 hover:bg-yellow-300 px-5 py-2.5 rounded-lg transition-colors shadow-md">
+                        <a href="{{ route('rekap-kegiatan.index') }}" class="inline-flex items-center text-sm font-bold text-blue-900 hover:text-gray-900 bg-yellow-400 hover:bg-yellow-300 px-5 py-2.5 rounded-lg transition-colors shadow-md">
                             Buka Modul 
                             <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>

@@ -27,4 +27,6 @@ Route::middleware([
     Route::resource('rekap-lb', RekapDosenLbController::class);
     Route::resource('manajemen-kjm', ManajemenKjmController::class);
     Route::resource('honor-ujian', RekapHonorUjianController::class);
+    Route::resource('rekap-nilai', App\Http\Controllers\RekapNilaiMahasiswaController::class);
+    Route::resource('rekap-kegiatan', App\Http\Controllers\RekapKegiatanUhbController::class);
 });
