@@ -14,4 +14,17 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/events', function () {
+        return view('events');
+    })->name('events');
+
+    Route::get('/calendar', function () {
+        return view('calendar');
+    })->name('calendar');
+
+    Route::get('/certificates', function () {
+        return view('certificates');
+    })->name('certificates');
 });
+
