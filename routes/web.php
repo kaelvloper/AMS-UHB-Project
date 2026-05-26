@@ -14,4 +14,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/lecturers', \App\Livewire\ManageLecturers::class)->name('lecturers');
+    Route::get('/rekap-pengajaran', \App\Livewire\ManageTeachingRecords::class)->name('teaching-records');
 });
