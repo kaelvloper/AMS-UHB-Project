@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\DistribusiPerkuliahanController;
+use App\Http\Controllers\RekapDosenLbController;
+use App\Http\Controllers\ManajemenKjmController;
+use App\Http\Controllers\RekapHonorUjianController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,6 +26,7 @@ Route::middleware([
         return view('pages.dashboard');
     })->name('dashboard');
 
+<<<<<<< HEAD
     // Nilai Mahasiswa
     Route::get('/nilai', function () {
         return view('pages.nilai.index');
@@ -41,4 +46,16 @@ Route::middleware([
         return view('pages.statistik.index');
     })->name('statistik.index');
 
+=======
+    Route::get('/dosen', function () {
+        return view('dosen');
+    })->name('dosen');
+
+    Route::resource('distribusiku', DistribusiPerkuliahanController::class);
+    Route::resource('rekap-lb', RekapDosenLbController::class);
+    Route::resource('manajemen-kjm', ManajemenKjmController::class);
+    Route::resource('honor-ujian', RekapHonorUjianController::class);
+    Route::resource('rekap-nilai', App\Http\Controllers\RekapNilaiMahasiswaController::class);
+    Route::resource('rekap-kegiatan', App\Http\Controllers\RekapKegiatanUhbController::class);
+>>>>>>> 8c23ed1adc5ddda7d6e7f8a0ae2aea090a44839b
 });
